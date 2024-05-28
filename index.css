@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.padre {
+    width: 100%;
+    height: 100vh; /* vh = Viewport Height -> Altura del dispositivo */
+
+    position: relative; /* Es relativa porque no quiero que los hijos floten en él */
+
+    /*Poner una imagen de fondo*/
+    background-image: url('https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    /* Centrar la imagen */
+    background-position: center;
+    /* Establecer el ancho y alto de la imagen en automático */
+    background-size: cover;
+}
+
+.fondoNegro {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.4);
+    position: absolute; /* Que flote */
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+}
+
+.contenedorNavbar {
+    z-index: 2;
+
+    border: solid 1px red;
+    width: 100%;
+
+    display: flex;
+    /* Para centrar en la pantalla */
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#logoEmpresa {
+    z-index: 2;
+    width: 80px;
+    height: auto;
+}
