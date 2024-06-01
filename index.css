@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+    font-family: "Kanit", sans-serif;
 }
 
 .padre {
@@ -31,7 +33,6 @@
 .contenedorNavbar {
     z-index: 2;
 
-    border: solid 1px red;
     width: 100%;
 
     display: flex;
@@ -41,10 +42,133 @@
 
     padding-top: 25px;
     padding-bottom: 25px;
+
+
+    /* Alinear los elementos en el medio */
+    place-content: space-evenly;
 }
 
 #logoEmpresa {
     z-index: 2;
     width: 80px;
     height: auto;
+}
+
+.redesSociales {
+    z-index: 2;
+}
+
+.redesSociales > svg {
+    fill: white;
+}
+
+.agrupadorLogoRedesSociales {
+    z-index: 2;
+    width: 200px;
+    display: flex;
+    /* Para centrar en la pantalla */
+    align-items: center;
+    justify-content: center;
+}
+
+.agrupadorLogoRedesSociales > .redesSociales {
+    margin-left: 35px;
+}
+
+.navbarLinks {
+    z-index: 2;
+    color: white;
+    display: flex;
+    width: 50%;
+}
+
+.linkPadre {
+    list-style: none; /*Quitar los puntos de la lista*/
+    width: 200px;
+}
+
+.linkPadre > .elementoDesplegable > svg {
+    fill: white;
+    width: 15px;
+}
+
+.menuEscondido {
+    display: none;
+    border: solid 1px rgba(56, 56, 56, 0.6);
+    width: fit-content;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+}
+
+.menuEscondido > li {
+    list-style: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.elementoDesplegable:hover > .menuEscondido {
+    display: block;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.boton {
+    z-index: 2;
+    color: black;
+    background-color: white;
+    padding: 15px;
+    border-radius: 2px;
+    border: solid 1px rgb(177, 153, 57);
+}
+
+.boton:hover {
+    background-color: rgb(177, 153, 57);
+    transition: ease-in-out cubic-bezier(0.86, 0, 0.07, 1);
+    border-radius: 10px;
+
+    box-shadow: -2px 12px 23px 0px rgba(0,0,0, 0.4);
+    /* box-shadow: -2px 12px 23px 0px rgba(166,166,166,1); */
+}
+
+
+
+.contenedorPrincipal {
+    z-index: 2;
+    width: 100vw;
+    height: calc(100vh - 130px);
+
+    color: white;
+
+
+    display: flex;
+    flex-direction: column;
+
+    place-items: center;
+    justify-content: center;
+}
+
+.contenedorPrincipal > h6 {
+    z-index: 2;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contenedorPrincipal > h1 {
+    z-index: 2;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contenedorPrincipal > p {
+    z-index: 2;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
